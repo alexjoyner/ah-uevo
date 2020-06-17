@@ -1,0 +1,30 @@
+{
+	"name": "ah-uevo",
+	"version": "0.1.0",
+	"description": "A language flashcard app with an emphasis on multiple meaning words",
+	"repository": "https://github.com/alexjoyner/ah-uevo.git",
+	"author": "Alex Joyner <alex@voicir.com>",
+	"private": true,
+	"scripts": {
+		"start": "parcel index.html --out-dir docs",
+		"build": "parcel build index.html --out-dir docs",
+		"type-check": "tsc --noEmit"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"ro-ui-atoms": "^0.1.0"
+	},
+	"devDependencies": {
+		"babel-preset-nano-react-app": "^0.1.0",
+		"parcel": "^1.12.4",
+		"@babel/core": "^7.9.6",
+		"typescript": "^3.8.3"
+	},
+	"babel": {
+		"presets": [
+			"babel-preset-nano-react-app"
+		]
+	}
+}

@@ -1,0 +1,8 @@
+{
+	"extends": "../../tsconfig.json",
+	// references required for monorepo to work
+	"references": [{
+		"path": "../../packages/ro-ui-atoms"
+	}],
+	"include": ["src/**/*"]
+}
