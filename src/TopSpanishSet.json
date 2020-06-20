@@ -1,0 +1,33 @@
+{
+	"name": "Top Spanish Words",
+	"words": [{
+		"foreignWord": "de",
+		"phoneticSpelling": "deh",
+		"uses": [{
+			"id": "1",
+			"englishWord": "from",
+			"foreignSentence": "Mis padres vienen de Mexico.",
+			"englishSentence": "My parents are from Mexico.",
+			"useDetails": "used to indicate origin"
+		}, {
+			"id": "2",
+			"foreignWord": "de",
+			"englishWord": "of/from",
+			"foreignSentence": "Esta mesa está hecha de plástico.",
+			"englishSentence": "This table is made of plastic.",
+			"useDetails": "used to indicate material"
+		}, {
+			"id": "3",
+			"englishWord": "of",
+			"englishSentence": "Madrid is the capital of spain.",
+			"foreignSentence": "Madrid es la capital de España.",
+			"useDetails": "Used to indicate possession"
+		}, {
+			"id": "4",
+			"englishWord": "of",
+			"englishSentence": "Isn't that Susan's house? / Isn't that the house of susan's?",
+			"foreignSentence": "Esa no es la casa de Sasana?",
+			"useDetails": "Used to indicate possession"
+		}]
+	}]
+}
