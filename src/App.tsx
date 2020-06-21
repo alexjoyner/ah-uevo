@@ -4,6 +4,7 @@ import { updateCardScore } from './utils/updateCardScore';
 import { getScores } from './utils/getScores';
 import { getCardsFromSet } from './utils/getCardsFromSet';
 import 'normalize.css';
+import './App.css'
 
 const getNextCard = (cards, lastCardId) => {
 	const scores: [{ id: number, score: number }] = getScores();
@@ -35,7 +36,9 @@ const App = ({ set }) => {
 	}
 	return (<>
 		<h1>{set.name}</h1>
-		<FlashCard card={card} onCorrect={handleCorrect} onIncorrect={handleIncorrect} />
+		<div className="FlashCardContainer">
+			<FlashCard card={card} onCorrect={handleCorrect} onIncorrect={handleIncorrect} />
+		</div>
 	</>)
 }
 
