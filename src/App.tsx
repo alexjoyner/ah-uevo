@@ -3,6 +3,7 @@ import { FlashCard } from './FlashCard/index.jsx';
 import { updateCardScore } from './utils/updateCardScore';
 import { getScores } from './utils/getScores';
 import { getCardsFromSet } from './utils/getCardsFromSet';
+import 'normalize.css';
 
 const getNextCard = (cards, lastCardId) => {
 	const scores: [{ id: number, score: number }] = getScores();

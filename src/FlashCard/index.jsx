@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Card } from 'ro-ui-atoms';
+import { Card, Button } from 'ro-ui-atoms';
+import { MdFlip } from 'react-icons/md';
 
 const FlashCard = ({
 	card,
@@ -24,33 +25,56 @@ const FlashCard = ({
 	const flipCard = () => {
 		setForeignSideShown(!foreignSideShown);
 	}
-	return (
-		<Card data-testid="flashcard">
+	const getUseCaseDetailsBtn = () => (
+		<>
 			{useDetailsShown ? (
-				<button data-testid="hide-use-details" onClick={() => setUseDetailsShown(false)}>Hide Use Details</button>
+				<Button data-testid="hide-use-details" onClick={() => setUseDetailsShown(false)}>Hide Use Details</Button>
 			) : (
-					<button data-testid="show-use-details" onClick={() => setUseDetailsShown(true)}>Show Use Details</button>
+					<Button data-testid="show-use-details" onClick={() => setUseDetailsShown(true)}>Show Use Details</Button>
 				)}
-			{
-				foreignSideShown ? (
-					<>
-						<div>{foreignWord}</div>
-						<div>{phoneticSpelling}</div>
-						<div>{foreignSentence}</div>
-					</>
-				) : (
-						<>
-							<div>{englishWord}</div>
-							<div>{englishSentence}</div>
-						</>
-					)
-			}
-			<div>{useDetailsShown && useDetails}</div>
-			<button data-testid="incorrect-btn" onClick={onIncorrect}>Incorrect</button>
-			<button data-testid="card-flip-btn" onClick={flipCard}>Flip</button>
-			<button data-testid="correct-btn" onClick={onCorrect}>Correct</button>
-		</Card >
+		</>
 	)
+	const getControlButtons = () => (<>
+		<Button data-testid="incorrect-btn" onClick={onIncorrect}>Incorrect</Button>
+		<Button data-testid="card-flip-btn" onClick={flipCard}><MdFlip /></Button>
+		<Button data-testid="correct-btn" onClick={onCorrect}>Correct</Button>
+	</>)
+	const getForeignSide = () => (
+		<Card data-testid="flashcard">
+			{({ Header, Footer, Body }) => (
+				<>
+					<Header>
+						<span>{foreignWord}</span>
+						--(<span>{phoneticSpelling}</span>)
+						<span>{getUseCaseDetailsBtn()}</span>
+					</Header>
+					<Body>
+						{foreignSentence}
+						<div>{useDetailsShown && useDetails}</div>
+					</Body>
+					<Footer>{getControlButtons()}</Footer>
+				</>
+			)}
+		</Card>
+	);
+	const getEnglishSide = () => (
+		<Card data-testid="flashcard">
+			{({ Header, Footer, Body }) => (
+				<>
+					<Header>
+						<span>{englishWord}</span>
+						<span>{getUseCaseDetailsBtn()}</span></Header>
+					<Body>
+						{englishSentence}
+						<div>{useDetailsShown && useDetails}</div>
+					</Body>
+					<Footer>{getControlButtons()}</Footer>
+				</>
+			)}
+		</Card>
+	);
+
+	return foreignSideShown ? getForeignSide() : getEnglishSide();
 }
 
 export { FlashCard };

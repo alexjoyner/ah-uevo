@@ -13,14 +13,16 @@
 	},
 	"license": "MIT",
 	"dependencies": {
+		"normalize.css": "^8.0.1",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
+		"react-icons": "^3.10.0",
 		"ro-ui-atoms": "^0.1.0"
 	},
 	"devDependencies": {
+		"@babel/core": "^7.9.6",
 		"babel-preset-nano-react-app": "^0.1.0",
 		"parcel": "^1.12.4",
-		"@babel/core": "^7.9.6",
 		"typescript": "^3.8.3"
 	},
 	"babel": {
