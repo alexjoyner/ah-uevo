@@ -49,11 +49,11 @@ test('User can show/hide the use case details', () => {
 
 	expect(screen.queryByText(TestCard.useDetails)).toBeNull();
 
-	fireEvent.click(screen.getByTestId('show-use-details'));
+	fireEvent.click(screen.getByTestId('use-details-btn'));
 
 	expect(screen.getByText(TestCard.useDetails)).toBeInTheDocument();
 
-	fireEvent.click(screen.getByTestId('hide-use-details'));
+	fireEvent.click(screen.getByTestId('use-details-btn'));
 
 	expect(screen.queryByText(TestCard.useDetails)).toBeNull();
 })

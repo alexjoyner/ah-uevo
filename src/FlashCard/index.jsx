@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Button } from 'ro-ui-atoms';
 import { MdFlip } from 'react-icons/md';
+import { AiOutlineCheck, AiOutlineClose, AiOutlineInfoCircle } from 'react-icons/ai';
+import './FlashCard.css'
 
 const FlashCard = ({
 	card,
@@ -26,55 +28,37 @@ const FlashCard = ({
 		setForeignSideShown(!foreignSideShown);
 	}
 	const getUseCaseDetailsBtn = () => (
-		<>
-			{useDetailsShown ? (
-				<Button data-testid="hide-use-details" onClick={() => setUseDetailsShown(false)}>Hide Use Details</Button>
-			) : (
-					<Button data-testid="show-use-details" onClick={() => setUseDetailsShown(true)}>Show Use Details</Button>
-				)}
-		</>
+		<Button
+			style={{ marginLeft: 'auto' }}
+			data-testid="use-details-btn"
+			onClick={() => setUseDetailsShown(!useDetailsShown)}>
+			<AiOutlineInfoCircle />
+		</Button>
 	)
 	const getControlButtons = () => (<>
-		<Button data-testid="incorrect-btn" onClick={onIncorrect}>Incorrect</Button>
+		<Button style={{ marginRight: 'auto' }} data-testid="incorrect-btn" onClick={onIncorrect}><AiOutlineClose /></Button>
 		<Button data-testid="card-flip-btn" onClick={flipCard}><MdFlip /></Button>
-		<Button data-testid="correct-btn" onClick={onCorrect}>Correct</Button>
+		<Button style={{ marginLeft: 'auto' }} data-testid="correct-btn" onClick={onCorrect}><AiOutlineCheck /></Button>
 	</>)
-	const getForeignSide = () => (
-		<Card data-testid="flashcard">
-			{({ Header, Footer, Body }) => (
-				<>
-					<Header>
-						<span>{foreignWord}</span>
-						--(<span>{phoneticSpelling}</span>)
-						<span>{getUseCaseDetailsBtn()}</span>
-					</Header>
-					<Body>
-						{foreignSentence}
-						<div>{useDetailsShown && useDetails}</div>
-					</Body>
-					<Footer>{getControlButtons()}</Footer>
-				</>
-			)}
-		</Card>
-	);
-	const getEnglishSide = () => (
-		<Card data-testid="flashcard">
-			{({ Header, Footer, Body }) => (
-				<>
-					<Header>
-						<span>{englishWord}</span>
-						<span>{getUseCaseDetailsBtn()}</span></Header>
-					<Body>
-						{englishSentence}
-						<div>{useDetailsShown && useDetails}</div>
-					</Body>
-					<Footer>{getControlButtons()}</Footer>
-				</>
-			)}
-		</Card>
-	);
 
-	return foreignSideShown ? getForeignSide() : getEnglishSide();
+	return (
+		<Card data-testid="flashcard">
+			{({ Header, Footer, Body }) => (
+				<>
+					<Header>
+						<span className="HeaderText" style={{ marginRight: '8px' }}>{foreignSideShown ? foreignWord : englishWord}</span>
+						{foreignSideShown && <span className="HeaderText">(<span>{phoneticSpelling}</span>)</span>}
+						{getUseCaseDetailsBtn()}
+					</Header>
+					<Body className="FlashCardBody">
+						{foreignSideShown ? foreignSentence : englishSentence}
+						<div>{useDetailsShown && useDetails}</div>
+					</Body>
+					<Footer>{getControlButtons()}</Footer>
+				</>
+			)}
+		</Card>
+	);
 }
 
 export { FlashCard };
