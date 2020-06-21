@@ -1,0 +1,22 @@
+{
+	"name": "Test Set",
+	"words": [{
+		"id": "1",
+		"foreignWord": "de",
+		"phoneticSpelling": "deh",
+		"uses": [{
+			"id": "A",
+			"englishWord": "from",
+			"foreignSentence": "Mis padres vienen de Mexico.",
+			"englishSentence": "My parents are from Mexico.",
+			"useDetails": "used to indicate origin"
+		}, {
+			"id": "B",
+			"foreignWord": "de",
+			"englishWord": "of/from",
+			"foreignSentence": "Esta mesa está hecha de plástico.",
+			"englishSentence": "This table is made of plastic.",
+			"useDetails": "used to indicate material"
+		}]
+	}]
+}

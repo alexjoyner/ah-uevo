@@ -1,8 +1,30 @@
 {
-	"extends": "../../tsconfig.json",
-	// references required for monorepo to work
-	"references": [{
-		"path": "../../packages/ro-ui-atoms"
-	}],
+	// copying necessary configuration files
+	//  from base ts-config
+	//  once Parcel2 is officially releases,
+	//  should be able to switch to tsconfig
+	//  native extends property
+	"exclude": [
+		"node_modules",
+		"blueprint-templates",
+		"**/*.test.*",
+		"**/*.setup.*",
+		"**/*.stories.*",
+		"**/test.*",
+		"**/setup.*",
+		"**/stories.*"
+	],
+	"compilerOptions": {
+		"moduleResolution": "node",
+		"module": "commonjs",
+		"jsx": "react",
+		"esModuleInterop": true,
+		"target": "ES6",
+		"declaration": true,
+		"sourceMap": true,
+		"removeComments": true,
+		"allowJs": true,
+		"composite": true
+	},
 	"include": ["src/**/*"]
 }
