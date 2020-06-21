@@ -31,10 +31,10 @@ describe('what card the app should be initialized with', () => {
 	})
 	describe('when all cards in set have been scored', () => {
 		const savedScores = JSON.stringify([{
-			id: '1',
+			id: '1A',
 			score: 10
 		}, {
-			id: '2',
+			id: '1B',
 			score: 1
 		}])
 		it('should start app with the lowest scored card', () => {
@@ -75,10 +75,10 @@ describe('what card is selected next after correct/incorrect event', () => {
 	})
 	describe('when all cards in set have been scored', () => {
 		const savedScores = JSON.stringify([{
-			id: '1',
+			id: '1A',
 			score: 1
 		}, {
-			id: '2',
+			id: '1B',
 			score: 1
 		}])
 		it('should get the next card with the lowest score THAT ISN\'T the current card', () => {
