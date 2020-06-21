@@ -1,33 +1,157 @@
 {
 	"name": "Top Spanish Words",
 	"words": [{
+		"id": "1",
 		"foreignWord": "de",
 		"phoneticSpelling": "deh",
 		"uses": [{
-			"id": "1",
+			"id": "A",
 			"englishWord": "from",
 			"foreignSentence": "Mis padres vienen de Mexico.",
 			"englishSentence": "My parents are from Mexico.",
 			"useDetails": "used to indicate origin"
 		}, {
-			"id": "2",
+			"id": "B",
 			"foreignWord": "de",
 			"englishWord": "of/from",
 			"foreignSentence": "Esta mesa está hecha de plástico.",
 			"englishSentence": "This table is made of plastic.",
 			"useDetails": "used to indicate material"
 		}, {
-			"id": "3",
+			"id": "C",
 			"englishWord": "of",
 			"englishSentence": "Madrid is the capital of spain.",
 			"foreignSentence": "Madrid es la capital de España.",
-			"useDetails": "Used to indicate possession"
+			"useDetails": "Used to indicate a relationship"
 		}, {
-			"id": "4",
+			"id": "D",
 			"englishWord": "of",
 			"englishSentence": "Isn't that Susan's house? / Isn't that the house of susan's?",
 			"foreignSentence": "Esa no es la casa de Sasana?",
 			"useDetails": "Used to indicate possession"
+		}, {
+			"id": "E",
+			"englishWord": "of",
+			"englishSentence": "The food was of great quality",
+			"foreignSentence": "La comida era de gran calidad.",
+			"useDetails": "Used to indicate Characteristics"
+		}, {
+			"id": "F",
+			"englishWord": "of",
+			"englishSentence": "Andres always carried around a bag of marbles",
+			"foreignSentence": "Andrés siempre llevaba una bolsa de canicas",
+			"useDetails": "Used to indicate content of"
+		}, {
+			"id": "G",
+			"englishWord": "of / NDT",
+			"englishSentence": "I'm going to buy another bathing suit (suit of bathing) for the summer",
+			"foreignSentence": "Voy a comprar otro traje de baño para el verano",
+			"useDetails": "Used for compound nouns"
+		}, {
+			"id": "H",
+			"englishWord": "in",
+			"englishSentence": "It is better to work in the morning",
+			"foreignSentence": "Es mejor trabajar de mañana.",
+			"useDetails": "Use to indicate time"
+		}, {
+			"id": "I",
+			"englishWord": "with / from",
+			"englishSentence": "I caught myself crying with (/ from) sorrow when I thought of her.",
+			"foreignSentence": "Me sorprendi llorando de pena al pensar en él.",
+			"useDetails": "Used to indicate cause"
+		}, {
+			"id": "J",
+			"englishWord": "of",
+			"englishSentence": "Take a piece of bread",
+			"foreignSentence": "Toma un trozo de pan.",
+			"useDetails": "Use to indicate part of"
+		}, {
+			"id": "K",
+			"englishWord": "of",
+			"englishSentence": "He's the tallest of them all.",
+			"foreignSentence": "Es el más alto de todos. (más ___ de)",
+			"useDetails": "Used to indicate superlative"
+		}, {
+			"id": "L",
+			"englishWord": "d",
+			"englishSentence": "Did you say the letter d or t?",
+			"foreignSentence": "¿Dijiste la letra de or te?",
+			"useDetails": "Used to indicate a letter"
+		}]
+	}, {
+		"id": "2",
+		"foreignWord": "que",
+		"phoneticSpelling": "keh",
+		"uses": [{
+			"id": "A",
+			"englishWord": "that",
+			"englishSentence": "Note that some of these characteristics are different",
+			"foreignSentence": "Tenga en cuenta que algunas de estas características son diferentes.",
+			"useDetails": "Used to introduce a subordinate clause"
+		}, {
+			"id": "B",
+			"englishWord": "than",
+			"englishSentence": "It's cheaper to buy the book in the bookstore than to buy it online.",
+			"foreignSentence": "Es más barato comprar el libro en la librería que comprario online.",
+			"useDetails": "Used in comparisons"
+		}, {
+			"id": "C",
+			"englishWord": "to",
+			"englishSentence": "I prefer small stores to big supermarkets",
+			"foreignSentence": "Prefiero las tiendas pequeñas que los grandes supermercados.",
+			"useDetails": "Used in comparisons"
+		}, {
+			"id": "D",
+			"englishWord": "who / that",
+			"englishSentence": "The man who (/ that) saved my baby's life is here.",
+			"foreignSentence": "El hombre que le salvó la vida a mi bebé está aqui.",
+			"useDetails": "Used to define a subject/object"
+		}, {
+			"id": "E",
+			"englishWord": "which / that",
+			"englishSentence": "The book which (/ that) has had the greatest influence on me is this one.",
+			"foreignSentence": "El libro que más ha influido en mí es este.",
+			"useDetails": "used to define a subject/object"
+		}]
+	}, {
+		"id": "3",
+		"foreignWord": "no",
+		"phoneticSpelling": "noh",
+		"uses": [{
+			"id": "A",
+			"englishWord": "no",
+			"englishSentence": "There's no door on the roof of my car.",
+			"foreignSentence": "No hay puerta en techo de mi coche",
+			"useDetails": "use for negation"
+		}, {
+			"id": "B",
+			"englishWord": "not",
+			"englishSentence": "It's not raining",
+			"foreignSentence": "No está lloviendo.",
+			"useDetails": "used for negation"
+		}, {
+			"id": "C",
+			"englishWord": "non-",
+			"englishSentence": "A non-governmental organization is an association that operates independently of government.",
+			"foreignSentence": "Una organización no gubernamental es una asociación que actúa con independencia del gobierno.",
+			"useDetails": "used for negation"
+		}, {
+			"id": "D",
+			"englishWord": "aren't we",
+			"englishSentence": "We're going to the party tonight, aren't we?",
+			"foreignSentence": "Vamos a la fiesta esta noche ¿no?",
+			"useDetails": "asking confirmation"
+		}]
+	}, {
+		"id": "4",
+		"foreignWord": "a",
+		"phoneticSpelling": "ah",
+		"uses": [{
+			"id": "A",
+			"englishWord": "aren't we",
+			"englishSentence": "We're going to the party tonight, aren't we?",
+			"foreignSentence": "Vamos a la fiesta esta noche ¿no?",
+			"useDetails": "asking confirmation",
 		}]
 	}]
 }
