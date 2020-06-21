@@ -2,12 +2,13 @@
 	"name": "ah-uevo",
 	"version": "0.1.0",
 	"description": "A language flashcard app with an emphasis on multiple meaning words",
+	"homepage": "http://alexjoyner.github.io/",
 	"repository": "https://github.com/alexjoyner/ah-uevo.git",
 	"author": "Alex Joyner <alex@voicir.com>",
 	"private": true,
 	"scripts": {
 		"start": "parcel index.html --out-dir docs",
-		"build": "parcel build index.html --out-dir docs",
+		"build": "rm -rf ./docs && parcel build index.html --out-dir docs --public-url ./",
 		"type-check": "tsc --noEmit"
 	},
 	"license": "MIT",
